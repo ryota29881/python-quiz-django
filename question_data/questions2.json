@@ -1,0 +1,400 @@
+[
+    {
+        "difficulty": "easy",
+        "question": "変数xに5を代入しxを出力する問題",
+        "rules": {
+            "assignment": {
+                "variable": "x",
+                "value": 5
+            },
+            "print": {
+                "variable": "x"
+            },
+            "execution": {
+                "variables": {
+                    "x": 5
+                },
+                "output": 5
+            }
+        },
+        "explanation": "変数xに5を代入しprint(x)で出力する基本問題"
+    },
+    {
+        "difficulty": "easy",
+        "question": "変数msgにHelloを代入し出力する問題",
+        "rules": {
+            "assignment": {
+                "variable": "msg",
+                "value": "Hello"
+            },
+            "print": {
+                "variable": "msg"
+            },
+            "execution": {
+                "variables": {
+                    "msg": "Hello"
+                },
+                "output": "Hello"
+            }
+        },
+        "explanation": "文字列を変数に代入して表示する基本問題"
+    },
+    {
+        "difficulty": "easy",
+        "question": "リストaに[1,2,3]を代入する問題",
+        "rules": {
+            "list_assignment": {
+                "variable": "a",
+                "length": 3.0
+            }
+        },
+        "explanation": "リストを作成できるか確認する問題"
+    },
+    {
+        "difficulty": "easy",
+        "question": "for文を使ってループを書く問題",
+        "rules": {
+            "for_loop": {}
+        },
+        "explanation": "for文を使えるか確認する基本問題"
+    },
+    {
+        "difficulty": "easy",
+        "question": "if文を使って条件分岐を書く問題",
+        "rules": {
+            "if_statement": {}
+        },
+        "explanation": "if文の構造を理解しているか確認する問題"
+    },
+    {
+        "difficulty": "easy",
+        "question": "関数addを定義し2つの数を足す関数を作る問題(引数は[1,2])",
+        "rules": {
+            "function": {
+                "name": "add",
+                "arg_count": 2.0,
+                "has_return": true
+            }
+        },
+        "explanation": "関数を定義して正しく戻り値を返せるか確認する問題"
+    },
+    {
+        "difficulty": "easy",
+        "question": "while文を使ってループを書く問題",
+        "rules": {
+            "while_loop": {}
+        },
+        "explanation": "while文の理解を確認する問題"
+    },
+    {
+        "difficulty": "easy",
+        "question": "辞書dを作成する問題",
+        "rules": {
+            "dict_assignment": {
+                "variable": "d"
+            }
+        },
+        "explanation": "dict型を作成できるか確認する問題"
+    },
+    {
+        "difficulty": "easy",
+        "question": "比較演算子==を使う問題",
+        "rules": {
+            "compare": {
+                "operator": "Eq"
+            }
+        },
+        "explanation": "等価比較演算子の理解確認問題"
+    },
+    {
+        "difficulty": "easy",
+        "question": "変数nに3を代入して出力する問題",
+        "rules": {
+            "assignment": {
+                "variable": "n",
+                "value": 3
+            },
+            "print": {
+                "variable": "n"
+            },
+            "execution": {
+                "variables": {
+                    "n": 3
+                },
+                "output": 3
+            }
+        },
+        "explanation": "変数代入と出力の総合基本問題"
+    },
+    {
+        "difficulty": "normal",
+        "question": "変数xに10を代入しxを出力してください",
+        "rules": {
+            "assignment": {
+                "variable": "x",
+                "value": 10
+            },
+            "print": {
+                "variable": "x"
+            },
+            "execution": {
+                "variables": {
+                    "x": 10
+                },
+                "output": 10
+            }
+        },
+        "explanation": "変数代入と出力の復習問題"
+    },
+    {
+        "difficulty": "normal",
+        "question": "for文とrangeを使ってループしてください",
+        "rules": {
+            "for_loop": {
+                "use_range": true
+            }
+        },
+        "explanation": "for文とrangeの組み合わせを学ぶ問題"
+    },
+    {
+        "difficulty": "normal",
+        "question": "while文を使ってループしてください",
+        "rules": {
+            "while_loop": {}
+        },
+        "explanation": "while文の基本問題"
+    },
+    {
+        "difficulty": "normal",
+        "question": "if文の中で大なり比較を行ってください",
+        "rules": {
+            "if_statement": {},
+            "compare": {
+                "operator": "Gt"
+            }
+        },
+        "explanation": "if文と比較演算子の問題"
+    },
+    {
+        "difficulty": "normal",
+        "question": "3つの要素を持つリストnumbersを作成してください",
+        "rules": {
+            "list_assignment": {
+                "variable": "numbers",
+                "length": 3.0
+            }
+        },
+        "explanation": "リスト作成問題"
+    },
+    {
+        "difficulty": "normal",
+        "question": "辞書dataを作成してください",
+        "rules": {
+            "dict_assignment": {
+                "variable": "data"
+            }
+        },
+        "explanation": "辞書型作成問題"
+    },
+    {
+        "difficulty": "normal",
+        "question": "引数1つの関数squareを作成し引数に4を入れて返ってくる値を16になるようにしてください",
+        "rules": {
+            "function": {
+                "name": "square",
+                "arg_count": 1.0,
+                "has_return": true
+            },
+            "execution": {
+                "function_result": {
+                    "name": "square",
+                    "args": [
+                        4
+                    ],
+                    "expected": 16.0
+                }
+            }
+        },
+        "explanation": "関数とreturnの問題"
+    },
+    {
+        "difficulty": "normal",
+        "question": "引数2つの関数addを作成し引数[3,5]を入れて足し算した値を返してください",
+        "rules": {
+            "function": {
+                "name": "add",
+                "arg_count": 2.0,
+                "has_return": true
+            },
+            "execution": {
+                "function_result": {
+                    "name": "add",
+                    "args": [
+                        3,
+                        5
+                    ],
+                    "expected": 8.0
+                }
+            }
+        },
+        "explanation": "関数の戻り値確認問題"
+    },
+    {
+        "difficulty": "normal",
+        "question": "for文の中で変数iをprintしてください",
+        "rules": {
+            "for_loop": {
+                "target": "i",
+                "print_variable": "i"
+            }
+        },
+        "explanation": "for文とprintの組み合わせ問題"
+    },
+    {
+        "difficulty": "normal",
+        "question": "if文の中で==比較を行ってください",
+        "rules": {
+            "if_statement": {},
+            "compare": {
+                "operator": "Eq"
+            }
+        },
+        "explanation": "等価比較の問題"
+    },
+    {
+        "difficulty": "hard",
+        "question": "rangeを使ったfor文の中で変数iを出力してください",
+        "rules": {
+            "for_loop": {
+                "use_range": true,
+                "target": "i",
+                "print_variable": "i"
+            }
+        },
+        "explanation": "for文とrangeを組み合わせてループ変数を出力する問題"
+    },
+    {
+        "difficulty": "hard",
+        "question": "引数1つの関数squareを作成し、引数に5を入れて関数を実行して受け取った値の2乗を返してください",
+        "rules": {
+            "function": {
+                "name": "square",
+                "arg_count": 1.0
+            },
+            "execution": {
+                "function_result": {
+                    "name": "square",
+                    "args": [
+                        5
+                    ],
+                    "expected": 25.0
+                }
+            }
+        },
+        "explanation": "関数・引数・returnを組み合わせた問題"
+    },
+    {
+        "difficulty": "hard",
+        "question": "引数2つの関数multiplyを作成し、引数に[4,6]を入れて関数を実行して掛け算結果を返してください",
+        "rules": {
+            "function": {
+                "name": "multiply",
+                "arg_count": 2.0,
+                "has_return": true
+            },
+            "execution": {
+                "function_result": {
+                    "name": "multiply",
+                    "args": [
+                        4,
+                        6
+                    ],
+                    "expected": 24.0
+                }
+            }
+        },
+        "explanation": "複数引数を扱う関数の問題"
+    },
+    {
+        "difficulty": "hard",
+        "question": "if文を使い、>=比較を行ってください",
+        "rules": {
+            "compare": {
+                "operator": "GtE"
+            }
+        },
+        "explanation": "if文と比較演算子>=を利用する問題"
+    },
+    {
+        "difficulty": "hard",
+        "question": "if文を使い、<=比較を行ってください",
+        "rules": {
+            "compare": {
+                "operator": "LtE"
+            }
+        },
+        "explanation": "if文と比較演算子<=を利用する問題"
+    },
+    {
+        "difficulty": "hard",
+        "question": "5要素を持つリストnumbersを作成しfor文を使ってください",
+        "rules": {
+            "list_assignment": {
+                "variable": "numbers",
+                "length": 5
+            },
+            "for_loop": {}
+        },
+        "explanation": "リストとfor文を組み合わせる問題"
+    },
+    {
+        "difficulty": "hard",
+        "question": "辞書dataを作成しif文を使ってください",
+        "rules": {
+            "dict_assignment": {
+                "variable": "data"
+            },
+            "if_statement": {}
+        },
+        "explanation": "辞書と条件分岐を組み合わせる問題"
+    },
+    {
+        "difficulty": "hard",
+        "question": "while文とif文を両方使ってください",
+        "rules": {
+            "while_loop": {},
+            "if_statement": {}
+        },
+        "explanation": "複数の制御構文を組み合わせる問題"
+    },
+    {
+        "difficulty": "hard",
+        "question": "rangeを使ったfor文を含む関数count_upを作成してください",
+        "rules": {
+            "function": {
+                "name": "count_up",
+                "arg_count": 1,
+                "has_return": true
+            },
+            "for_loop": {
+                "use_range": true
+            }
+        },
+        "explanation": "関数・for文・range・returnを組み合わせる問題"
+    },
+    {
+        "difficulty": "hard",
+        "question": "引数1つの関数is_positiveを作成し、引数に10を入れて関数を実行して正の数ならTrueを返してください",
+        "rules": {
+            "function": {
+                "name": "is_positive",
+                "arg_count": 1,
+                "has_return": true
+            },
+            "compare": {
+                "operator": "Gt"
+            }
+        },
+        "explanation": "条件分岐を含む関数作成問題"
+    }
+]

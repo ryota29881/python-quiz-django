@@ -1,0 +1,195 @@
+{% extends "quiz/base.html" %}
+
+
+{% block title %}
+Python Quiz
+{% endblock %}
+
+
+{% block content %}
+
+<div class="quiz-card">
+
+    <div class="quiz-info">
+
+        <span class="quiz-category">
+            {{ category }}
+        </span>
+
+        <span class="quiz-difficulty">
+            難易度：{{ difficulty }}
+        </span>
+
+    </div>
+
+
+    <div class="quiz-progress">
+        問題 {{ current_index }} / {{ total_questions }}
+    </div>
+
+
+    <div class="progress-container">
+
+        <div
+            class="progress-bar"
+            style="width: {% widthratio current_index total_questions 100 %}%"
+        ></div>
+
+    </div>
+
+
+    <!-- 問題 -->
+
+    <div class="question-box">
+
+        <h2>
+            {{ question.question }}
+        </h2>
+
+    </div>
+
+
+    <!-- コードがある問題の場合 -->
+
+    {% if question.code %}
+
+        <div class="code-box">
+
+            <pre><code>{{ question.code }}</code></pre>
+
+        </div>
+
+    {% endif %}
+
+
+    <!-- 未回答 -->
+
+    {% if not answered %}
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            <div class="choices">
+
+                {% for choice in question.choices.all %}
+
+                    <label class="choice">
+
+                        <input
+                            type="radio"
+                            name="choice"
+                            value="{{ choice.id }}"
+                            required
+                        >
+
+                        <span>
+                            {{ choice.text }}
+                        </span>
+
+                    </label>
+
+                {% endfor %}
+
+            </div>
+
+
+            <div class="answer-button">
+
+                <button type="submit">
+                    回答する
+                </button>
+
+            </div>
+
+        </form>
+
+    {% endif %}
+
+
+    <!-- 回答後 -->
+
+    {% if answered %}
+
+        <div class="result-box">
+
+            <h2
+                class="
+                    {% if result == '正解！' %}
+                        correct
+                    {% else %}
+                        incorrect
+                    {% endif %}
+                "
+            >
+                {{ result }}
+            </h2>
+
+
+            <!-- 不正解の場合のみ正解を表示 -->
+
+            {% if result == "不正解" %}
+
+                {% if correct_choice %}
+
+                    <div class="correct-answer">
+
+                        <h3>
+                            正解
+                        </h3>
+
+                        <p>
+                            {{ correct_choice.text }}
+                        </p>
+
+                    </div>
+
+                {% endif %}
+
+            {% endif %}
+
+
+            <!-- 解説 -->
+
+            <h3>
+                解説
+            </h3>
+
+
+            <p class="explanation-text">{{ explanation }}</p>
+
+
+            <!-- 次の問題 -->
+
+            {% if current_index < total_questions %}
+
+                <form
+                    method="get"
+                    action="{% url 'next_question' %}"
+                >
+
+                    <button type="submit">
+                        次の問題
+                    </button>
+
+                </form>
+
+            {% else %}
+
+                <a href="{% url 'result' %}">
+
+                    <button type="button">
+                        結果を見る
+                    </button>
+
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

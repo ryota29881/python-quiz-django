@@ -1,0 +1,42 @@
+{% extends "quiz/base.html" %}
+
+{% block title %}
+クイズ結果
+{% endblock %}
+
+{% block content %}
+
+<h2>クイズ結果</h2>
+
+<div class="result-box">
+
+    <p>正解数</p>
+    <h3>{{ score }} / {{ total_questions }}</h3>
+
+    <p>正答率</p>
+    <h3>{{ accuracy|floatformat:0 }}%</h3>
+
+    <p>ランク</p>
+    <h3 class="{% if rank == 'S' %}rank-s{% elif rank == 'A' %}rank-a{% elif rank == 'B' %}rank-b{% elif rank == 'C' %}rank-c{% else %}rank-d{% endif %}">{{ rank }}</h3>
+
+</div>
+
+<br>
+
+<div class="result-buttons">
+
+    <a href="{% url 'start_quiz' category difficulty %}">
+        もう一度挑戦する
+    </a>
+
+    <a href="{% url 'index' %}">
+        カテゴリ選択に戻る
+    </a>
+
+    <a href="{% url 'home' %}">
+        タイトルへ戻る
+    </a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "quiz/base.html" %}
+
+{% block title %}
+ログイン
+{% endblock %}
+
+{% block content %}
+
+<div class="quiz-card auth-card">
+
+    <h1>ログイン</h1>
+
+    <p>クイズの成績を保存するにはログインしてください。</p>
+
+    <form method="post" class="auth-form">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}">
+        {% endif %}
+
+        <button type="submit">ログイン</button>
+
+    </form>
+
+    <p>
+        アカウントをお持ちでない場合は、
+        <a href="{% url 'register' %}">新規登録</a>
+        してください。
+    </p>
+
+    <p>
+        <a href="{% url 'home' %}">タイトルへ戻る</a>
+    </p>
+
+</div>
+
+{% endblock %}

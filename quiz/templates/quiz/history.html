@@ -1,0 +1,237 @@
+{% extends "quiz/base.html" %}
+
+{% block title %}
+マイページ・クイズ成績
+{% endblock %}
+
+{% block content %}
+
+<div class="quiz-card">
+
+<h1>
+    {{ user.username }} さんのマイページ
+</h1>
+
+<p class="mypage-description">
+    これまでのクイズ成績を確認できます。
+</p>
+
+
+<!-- ==========================================
+     全体成績
+=========================================== -->
+
+<div class="statistics">
+
+    <h2>
+        全体成績
+    </h2>
+
+    <div class="statistics-grid">
+
+        <div class="stat-card">
+            <p>総プレイ回数</p>
+            <strong>{{ total_play_count }}<span>回</span></strong>
+        </div>
+
+        <div class="stat-card">
+            <p>平均正答率</p>
+            <strong>{{ average_accuracy|floatformat:0 }}<span>%</span></strong>
+        </div>
+
+        <div class="stat-card">
+            <p>最高正答率</p>
+            <strong>{{ highest_accuracy|floatformat:0 }}<span>%</span></strong>
+        </div>
+
+        <div class="stat-card">
+            <p>累計正解数</p>
+            <strong>{{ total_score }}<span> / {{ total_questions }}</span></strong>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     クイズ種別ごとの成績
+=========================================== -->
+
+<div class="statistics">
+
+    <h2>
+        クイズ種別ごとの成績
+    </h2>
+
+    <div class="dashboard-grid">
+
+        {% for stat in quiz_type_stats %}
+
+            <div class="dashboard-card">
+
+                <h3>{{ stat.label }}</h3>
+
+                <p>プレイ回数：<strong>{{ stat.play_count }}回</strong></p>
+
+                <p>平均正答率：<strong>{{ stat.average_accuracy|floatformat:0 }}%</strong></p>
+
+                <div class="accuracy-bar">
+                    <div
+                        class="accuracy-bar-fill"
+                        style="width: {{ stat.average_accuracy }}%;"
+                    ></div>
+                </div>
+
+                <p>最高正答率：<strong>{{ stat.highest_accuracy|floatformat:0 }}%</strong></p>
+
+                <p>累計正解数：<strong>{{ stat.score }} / {{ stat.questions }}</strong></p>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+
+<!-- ==========================================
+     4択クイズのカテゴリ別成績
+=========================================== -->
+
+<div class="statistics">
+
+    <h2>
+        4択クイズ・カテゴリ別成績
+    </h2>
+
+    <div class="dashboard-grid">
+
+        {% for stat in category_stats %}
+
+            <div class="dashboard-card">
+
+                <h3>{{ stat.label }}</h3>
+
+                <p>プレイ回数：<strong>{{ stat.play_count }}回</strong></p>
+
+                <p>平均正答率：<strong>{{ stat.average_accuracy|floatformat:0 }}%</strong></p>
+
+                <div class="accuracy-bar">
+                    <div
+                        class="accuracy-bar-fill"
+                        style="width: {{ stat.average_accuracy }}%;"
+                    ></div>
+                </div>
+
+                <p>最高正答率：<strong>{{ stat.highest_accuracy|floatformat:0 }}%</strong></p>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+
+<hr>
+
+
+<!-- ==========================================
+     履歴一覧
+=========================================== -->
+
+<h2>
+    クイズ履歴
+</h2>
+
+{% if histories %}
+
+    {% for history in histories %}
+
+        <div class="history-item">
+
+            <div class="history-header">
+                <strong>
+                    {{ history.created_at|date:"Y/m/d H:i" }}
+                </strong>
+
+                <span class="history-rank rank-{{ history.rank|lower }}">
+                    Rank {{ history.rank }}
+                </span>
+            </div>
+
+            <p>
+                クイズ：
+                {{ history.get_quiz_type_display }}
+            </p>
+
+            {% if history.category %}
+
+                <p>
+                    カテゴリ：
+
+                    {% if history.category == "basic" %}
+                        Python基礎
+                    {% elif history.category == "cert" %}
+                        Python3認定基礎試験対策
+                    {% else %}
+                        {{ history.category }}
+                    {% endif %}
+                </p>
+
+            {% endif %}
+
+            <p>
+                難易度：
+                {{ history.get_difficulty_display }}
+            </p>
+
+            <p>
+                結果：
+                {{ history.score }} / {{ history.total_questions }}
+            </p>
+
+            <p>
+                正答率：
+                <strong>{{ history.accuracy|floatformat:0 }}%</strong>
+            </p>
+
+        </div>
+
+    {% endfor %}
+
+{% else %}
+
+    <p>
+        まだクイズ履歴がありません。
+    </p>
+
+{% endif %}
+
+
+<!-- ==========================================
+     ボタン
+=========================================== -->
+
+<div class="result-buttons">
+
+    <a href="{% url 'home' %}">
+        タイトルへ戻る
+    </a>
+
+    <a href="{% url 'index' %}">
+        4択クイズを始める
+    </a>
+
+    <a href="{% url 'code_quiz_difficulty_select' %}">
+        コード作成クイズを始める
+    </a>
+
+</div>
+
+</div>
+
+{% endblock %}

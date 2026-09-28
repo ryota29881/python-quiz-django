@@ -1,0 +1,77 @@
+{% extends "quiz/base.html" %}
+
+
+{% block title %}
+コード作成クイズ
+{% endblock %}
+
+
+{% block content %}
+
+<div class="quiz-card">
+
+    <h1>
+        コード作成クイズ
+    </h1>
+
+
+    <h2>
+        難易度を選択してください
+    </h2>
+
+
+    <div>
+
+        <a href="{% url 'code_quiz' difficulty='easy' %}">
+            <button type="button">
+                初級
+            </button>
+        </a>
+
+    </div>
+
+
+    <br>
+
+
+    <div>
+
+        <a href="{% url 'code_quiz' difficulty='normal' %}">
+            <button type="button">
+                中級
+            </button>
+        </a>
+
+    </div>
+
+
+    <br>
+
+
+    <div>
+
+        <a href="{% url 'code_quiz' difficulty='hard' %}">
+            <button type="button">
+                上級
+            </button>
+        </a>
+
+    </div>
+
+
+    <br>
+
+
+    <div>
+
+        <a href="{% url 'home' %}">
+            <button type="button">
+                タイトルへ戻る
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

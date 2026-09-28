@@ -1,0 +1,74 @@
+{% extends "quiz/base.html" %}
+
+{% block title %}
+コードクイズ結果
+{% endblock %}
+
+{% block content %}
+
+<div class="quiz-card">
+
+    <h1>コード作成クイズ 結果</h1>
+
+    <hr>
+
+    <p>
+        難易度：
+        {% if difficulty == "easy" %}
+            初級
+        {% elif difficulty == "normal" %}
+            中級
+        {% elif difficulty == "hard" %}
+            上級
+        {% else %}
+            {{ difficulty }}
+        {% endif %}
+    </p>
+
+    <h2>正解数</h2>
+    <h3>{{ score }} / {{ total_questions }}</h3>
+
+    <h2>正答率</h2>
+    <h3>{{ accuracy|floatformat:0 }}%</h3>
+
+    <h2>ランク</h2>
+
+    {% if rank == "S" %}
+        <div class="rank-s">S</div>
+    {% elif rank == "A" %}
+        <div class="rank-a">A</div>
+    {% elif rank == "B" %}
+        <div class="rank-b">B</div>
+    {% elif rank == "C" %}
+        <div class="rank-c">C</div>
+    {% else %}
+        <div class="rank-d">D</div>
+    {% endif %}
+
+    <br>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="restart">
+        <button type="submit">もう一度挑戦</button>
+    </form>
+
+    <br>
+
+    <div>
+        <a href="{% url 'code_quiz_difficulty_select' %}">
+            <button type="button">難易度選択</button>
+        </a>
+    </div>
+
+    <br>
+
+    <div>
+        <a href="{% url 'code_quiz_exit' %}">
+            <button type="button">タイトルへ戻る</button>
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}

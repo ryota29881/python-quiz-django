@@ -1,0 +1,25 @@
+{% extends "quiz/base.html" %}
+
+{% block title %}
+カテゴリ選択
+{% endblock %}
+
+{% block content %}
+
+<h2>クイズの種類を選択してください</h2>
+
+<div class="menu-buttons">
+
+    {% for value, label in categories %}
+
+        <p>
+            <a href="{% url 'difficulty_select' value %}">
+                {{ label }}
+            </a>
+        </p>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,261 @@
+{% extends "quiz/base.html" %}
+
+
+{% block title %}
+コード作成クイズ
+{% endblock %}
+
+
+{% block content %}
+
+<div class="quiz-card">
+
+    <h1>
+        コード作成クイズ
+    </h1>
+
+
+    {% if question %}
+
+        <div class="quiz-info">
+
+            <span>
+                難易度：
+
+                {% if difficulty == "easy" %}
+                    初級
+                {% elif difficulty == "normal" %}
+                    中級
+                {% elif difficulty == "hard" %}
+                    上級
+                {% else %}
+                    {{ difficulty }}
+                {% endif %}
+
+            </span>
+
+        </div>
+
+
+        <div class="quiz-progress">
+            問題 {{ question_number }} / {{ total_questions }}
+        </div>
+
+
+        <div class="progress-container">
+
+            <div
+                class="progress-bar"
+                style="width: {% widthratio question_number total_questions 100 %}%"
+            ></div>
+
+        </div>
+
+
+        <hr>
+
+
+        <h2>
+            問題
+        </h2>
+
+
+        <div class="question-box">
+
+            <p>
+                {{ question.question }}
+            </p>
+
+        </div>
+
+
+        <!-- 未回答 -->
+
+        {% if not answered %}
+
+            <form method="post">
+
+                {% csrf_token %}
+
+                <input
+                    type="hidden"
+                    name="action"
+                    value="judge"
+                >
+
+
+                <textarea
+                    name="code"
+                    rows="15"
+                    placeholder="ここにPythonコードを入力してください"
+                    required
+                ></textarea>
+
+
+                <br>
+
+
+                <button type="submit">
+                    採点する
+                </button>
+
+            </form>
+
+        {% endif %}
+
+
+        <!-- 回答後 -->
+
+        {% if answered %}
+
+            <hr>
+
+
+            <h2>
+
+                {% if result == "正解！" %}
+
+                    <span class="correct">
+                        {{ result }}
+                    </span>
+
+                {% elif result == "不正解" %}
+
+                    <span class="incorrect">
+                        {{ result }}
+                    </span>
+
+                {% else %}
+
+                    {{ result }}
+
+                {% endif %}
+
+            </h2>
+
+
+            <h3>
+                解説
+            </h3>
+
+
+            <div class="explanation">
+
+                <p class="explanation-text">{{ explanation }}</p>
+
+            </div>
+
+
+            <br>
+
+
+            <!-- 1～4問目 -->
+
+            {% if question_number < total_questions %}
+
+                <form method="post">
+
+                    {% csrf_token %}
+
+                    <input
+                        type="hidden"
+                        name="action"
+                        value="next"
+                    >
+
+                    <button type="submit">
+                        次の問題
+                    </button>
+
+                </form>
+
+
+            <!-- 5問目 -->
+
+            {% else %}
+
+                <form method="post">
+
+                    {% csrf_token %}
+
+                    <input
+                        type="hidden"
+                        name="action"
+                        value="result"
+                    >
+
+                    <button type="submit">
+                        結果を見る
+                    </button>
+
+                </form>
+
+            {% endif %}
+
+        {% endif %}
+
+
+        <br>
+
+
+        <div>
+
+            <a href="{% url 'code_quiz_exit' %}">
+
+                <button type="button">
+                    タイトルへ戻る
+                </button>
+
+            </a>
+
+        </div>
+
+
+    {% else %}
+
+        <h2>
+            問題がありません
+        </h2>
+
+
+        <p>
+            この難易度には現在問題が登録されていません。
+        </p>
+
+
+        <br>
+
+
+        <div>
+
+            <a href="{% url 'code_quiz_difficulty_select' %}">
+
+                <button type="button">
+                    難易度選択へ戻る
+                </button>
+
+            </a>
+
+        </div>
+
+
+        <br>
+
+
+        <div>
+
+            <a href="{% url 'code_quiz_exit' %}">
+
+                <button type="button">
+                    タイトルへ戻る
+                </button>
+
+            </a>
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

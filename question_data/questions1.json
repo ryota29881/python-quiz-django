@@ -1,0 +1,1262 @@
+[
+    {
+        "category": "basic",
+        "difficulty": "easy",
+        "question": "Pythonで文字列を表示する関数はどれですか？",
+        "code": "",
+        "choices": [
+            "print()",
+            "display()",
+            "show()",
+            "output()"
+        ],
+        "answer_index": 0,
+        "explanation": "print() は画面に文字列や変数の内容を出力するための標準関数です。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "easy",
+        "question": "次のコードの実行結果は？",
+        "code": "x = 5\nprint(x)",
+        "choices": [
+            "x",
+            "0",
+            "5",
+            "エラー"
+        ],
+        "answer_index": 2,
+        "explanation": "変数 x に5を代入し、その値を print() で表示しています。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "easy",
+        "question": "Pythonでコメントを書く記号はどれですか？",
+        "code": "",
+        "choices": [
+            "--",
+            "/* */",
+            "//",
+            "#"
+        ],
+        "answer_index": 3,
+        "explanation": "Pythonの1行コメントは # を使用します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "easy",
+        "question": "次のうち整数型はどれですか？",
+        "code": "",
+        "choices": [
+            "\"10\"",
+            "10.5",
+            "10",
+            "True"
+        ],
+        "answer_index": 2,
+        "explanation": "10 は整数型（int）です。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "easy",
+        "question": "次のコードの実行結果は？",
+        "code": "print(3 + 2)",
+        "choices": [
+            "32",
+            "5",
+            "6",
+            "エラー"
+        ],
+        "answer_index": 1,
+        "explanation": "数値同士の加算なので結果は 5 になります。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "easy",
+        "question": "変数に値を代入する記号は？",
+        "code": "",
+        "choices": [
+            "==",
+            "=",
+            ":=",
+            "->"
+        ],
+        "answer_index": 1,
+        "explanation": "代入演算子は = です。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "easy",
+        "question": "次のうち真(True)になるものはどれですか？",
+        "code": "",
+        "choices": [
+            "10 == 10",
+            "5 < 3",
+            "8 != 8",
+            "False"
+        ],
+        "answer_index": 0,
+        "explanation": "10 == 10 は同じ値なのでTrueになります。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "easy",
+        "question": "リストを表す記号はどれですか？",
+        "code": "",
+        "choices": [
+            "< >",
+            "( )",
+            "{ }",
+            "[ ]"
+        ],
+        "answer_index": 3,
+        "explanation": "リストは角括弧 [] を使用します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "easy",
+        "question": "次のコードの実行結果は？",
+        "code": "numbers = [1, 2, 3]\nprint(len(numbers))",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "エラー"
+        ],
+        "answer_index": 2,
+        "explanation": "len() はリストに使用すると要素数を取得する関数です。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "easy",
+        "question": "条件分岐で使用するキーワードはどれですか？",
+        "code": "",
+        "choices": [
+            "if",
+            "for",
+            "while",
+            "def"
+        ],
+        "answer_index": 0,
+        "explanation": "if は条件分岐を行うためのキーワードです。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "x = [1, 2, 3]\nprint(x[1])",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "エラー"
+        ],
+        "answer_index": 1,
+        "explanation": "リストのインデックスは0から始まります。\nx[1]は2番目の要素である「2」を取得します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "for i in range(3):\n    print(i)",
+        "choices": [
+            "0 1 2",
+            "1 2 3",
+            "0 1 2 3",
+            "エラー"
+        ],
+        "answer_index": 0,
+        "explanation": "range(3)は0から3未満の整数を生成するため、\n0、1、2が順番に出力されます。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "normal",
+        "question": "関数を定義するキーワードはどれですか？",
+        "code": "",
+        "choices": [
+            "function",
+            "method",
+            "define",
+            "def"
+        ],
+        "answer_index": 3,
+        "explanation": "Pythonではdefを使って関数を定義します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "def add(a, b):\n    return a + b\nprint(add(3, 4))",
+        "choices": [
+            "a+b",
+            "34",
+            "7",
+            "エラー"
+        ],
+        "answer_index": 2,
+        "explanation": "関数addは引数aとbを足して返します。\n3+4なので結果は7です。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "normal",
+        "question": "次のうち辞書(Dictionary)を表すものはどれですか？",
+        "code": "",
+        "choices": [
+            "[1, 2, 3]",
+            "(1, 2, 3)",
+            "{\"name\": \"Taro\"}",
+            "{1, 2, 3}"
+        ],
+        "answer_index": 2,
+        "explanation": "辞書はキーと値の組み合わせで構成されます。\n{\"name\": \"Taro\"}のように記述します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "name = \"Python\"\nprint(name.lower())",
+        "choices": [
+            "PYTHON",
+            "Python",
+            "python",
+            "エラー"
+        ],
+        "answer_index": 2,
+        "explanation": "lower()は文字列をすべて小文字に変換します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "normal",
+        "question": "while文が終了する条件として正しいものはどれですか？",
+        "code": "",
+        "choices": [
+            "条件がTrueになったとき",
+            "条件がFalseになったとき",
+            "breakがないと終了しない",
+            "自動で10回繰り返す"
+        ],
+        "answer_index": 1,
+        "explanation": "while文は条件がTrueの間実行され、\nFalseになると終了します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "x = 10\nif x > 5:\n    print(\"A\")\nelse:\n    print(\"B\")",
+        "choices": [
+            "A",
+            "B",
+            "AB",
+            "エラー"
+        ],
+        "answer_index": 0,
+        "explanation": "10は5より大きいためif文が実行され、\"A\"が出力されます。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "normal",
+        "question": "リストの末尾に要素を追加するメソッドはどれですか？",
+        "code": "",
+        "choices": [
+            "add()",
+            "insert()",
+            "append()",
+            "push()"
+        ],
+        "answer_index": 2,
+        "explanation": "append()はリストの最後に要素を追加します。\nnumbers = [1, 2]\nnumbers.append(3)\n結果：[1, 2, 3]"
+    },
+    {
+        "category": "basic",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "numbers = [10, 20, 30]\nfor n in numbers:\n    print(n)",
+        "choices": [
+            "10\n20\n30",
+            "0\n1\n2",
+            "30\n20\n10",
+            "エラー"
+        ],
+        "answer_index": 0,
+        "explanation": "for文はリストの各要素を順番に取り出します。\nそのため10、20、30が順番に出力されます。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "numbers = [x * 2 for x in range(3)]\nprint(numbers)",
+        "choices": [
+            "[0, 1, 2]",
+            "[0, 2, 4]",
+            "[2, 4, 6]",
+            "エラー"
+        ],
+        "answer_index": 1,
+        "explanation": "リスト内包表記です。\nrange(3)は 0,1,2 を生成し、それぞれ2倍されるため[0, 2, 4]になります。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "square = lambda x: x ** 2\nprint(square(4))",
+        "choices": [
+            "4",
+            "8",
+            "16",
+            "エラー"
+        ],
+        "answer_index": 2,
+        "explanation": "lambdaは無名関数です。\nlambda x: x ** 2は\ndef square(x):\n    return x ** 2\nとほぼ同じ意味です。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "hard",
+        "question": "例外処理で例外を捕捉するキーワードはどれですか？",
+        "code": "",
+        "choices": [
+            "catch",
+            "except",
+            "error",
+            "rescue"
+        ],
+        "answer_index": 1,
+        "explanation": "Pythonでは\ntry:\n    ...\nexcept:\n    ...\nのように記述します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "try:\n    print(10 / 0)\nexcept ZeroDivisionError:\n    print(\"Error\")",
+        "choices": [
+            "0",
+            "Error",
+            "10",
+            "エラーで停止"
+        ],
+        "answer_index": 1,
+        "explanation": "0で割るとZeroDivisionErrorが発生します。\nexceptで捕捉しているためプログラムは停止せず「Error」を表示します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "hard",
+        "question": "クラスを定義するキーワードはどれですか？",
+        "code": "",
+        "choices": [
+            "object",
+            "class",
+            "struct",
+            "define"
+        ],
+        "answer_index": 1,
+        "explanation": "class Person:\n    pass\n上記のようにclassを使用します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "class Dog:\n    def __init__(self, name):\n        self.name = name\ndog = Dog(\"Pochi\")\nprint(dog.name)",
+        "choices": [
+            "Dog",
+            "name",
+            "Pochi",
+            "エラー"
+        ],
+        "answer_index": 2,
+        "explanation": "コンストラクタ__init__()で渡された文字列が\nインスタンス変数nameに保存されています。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "hard",
+        "question": "継承を表すコードとして正しいものはどれですか？",
+        "code": "",
+        "choices": [
+            "class Child extends Parent:",
+            "class Child(Parent):",
+            "inherit Parent:",
+            "class Child -> Parent:"
+        ],
+        "answer_index": 1,
+        "explanation": "Pythonの継承は\nclass Child(Parent):\nと記述します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "def func(*args):\n    return len(args)\nprint(func(1, 2, 3))",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "エラー"
+        ],
+        "answer_index": 2,
+        "explanation": "*argsは可変長引数です。\n渡された引数はタプルとして受け取られます。\n(1, 2, 3)の要素数は3です。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "hard",
+        "question": "ジェネレータ関数で使用するキーワードはどれですか？",
+        "code": "",
+        "choices": [
+            "return",
+            "break",
+            "continue",
+            "yield"
+        ],
+        "answer_index": 3,
+        "explanation": "ジェネレータはyieldを使って値を1つずつ返します。"
+    },
+    {
+        "category": "basic",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "def gen():\n    yield 1\n    yield 2\ng = gen()\nprint(next(g))",
+        "choices": [
+            "1",
+            "2",
+            "[1, 2]",
+            "エラー"
+        ],
+        "answer_index": 0,
+        "explanation": "ジェネレータはnext()で順番に値を取得します。\n最初のyield 1が返されるため結果は1になります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "次のコードの実行結果は？",
+        "code": "print(type(10))",
+        "choices": [
+            "<class 'str'>",
+            "<class 'int'>",
+            "<class 'float'>",
+            "<class 'bool'>"
+        ],
+        "answer_index": 1,
+        "explanation": "10は整数なのでint型になります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "Pythonのコメントとして正しいものは？",
+        "code": "",
+        "choices": [
+            "//",
+            "#",
+            "<!-- -->",
+            "/* */"
+        ],
+        "answer_index": 1,
+        "explanation": "Pythonは#でコメントになります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "次のコードの実行結果は？",
+        "code": "print(2 ** 3)",
+        "choices": [
+            "6",
+            "8",
+            "9",
+            "23"
+        ],
+        "answer_index": 1,
+        "explanation": "**はべき乗演算子です。\nそのため計算は「2x2x2」となり結果は「8」になります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "リストを作る記号は？",
+        "code": "",
+        "choices": [
+            "()",
+            "{}",
+            "[]",
+            "<>"
+        ],
+        "answer_index": 2,
+        "explanation": "Pythonでリスト（list）を作るときは 角括弧 [] を使います。\n()はタプルで{}は辞書、<>はPythonでは使いません。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "次のコードの実行結果は？",
+        "code": "print(len(\"Python\"))",
+        "choices": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "answer_index": 1,
+        "explanation": "len()は文字数をカウントします。\nPythonは6文字です。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "bool(0) の結果は？",
+        "code": "",
+        "choices": [
+            "True",
+            "False",
+            "0",
+            "True"
+        ],
+        "answer_index": 1,
+        "explanation": "Pythonの bool() は「値を真偽値（True / False）に変換する関数」です。\n次のような値は False扱い（Falsy） になります。\n0,0.0,\"\"(空文字),[](空リスト),{}(空辞書),None"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "文字列結合演算子は？",
+        "code": "",
+        "choices": [
+            "+",
+            "&",
+            ".",
+            ","
+        ],
+        "answer_index": 0,
+        "explanation": "Pythonでは +（プラス） を使って文字列を結合します。\n&はビット演算に使用する記号です。文字列には使用できません。\n.は属性アクセスに使用します。例：\"hello\".upper()\n,は複数の値を区切る記号です。\n例：print(\"Hello\", \"World\") 出力ではスペース付きで表示されますが結合ではありません。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "次のコードの実行結果は？",
+        "code": "print(3 * \"a\")",
+        "choices": [
+            "aaa",
+            "3a",
+            "a3",
+            "エラー"
+        ],
+        "answer_index": 0,
+        "explanation": "Pythonでは、文字列に整数を掛けると 繰り返し になります。\nprint(3 * \"a\")は\"a\" + \"a\" + \"a\"と同じ意味です。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "辞書の型は？",
+        "code": "",
+        "choices": [
+            "list",
+            "turple",
+            "dict",
+            "set"
+        ],
+        "answer_index": 2,
+        "explanation": "Pythonで「辞書型」を表すデータ型は dict です。\n辞書は「キー」と「値」のペアでデータを管理します。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "標準出力関数は？",
+        "code": "",
+        "choices": [
+            "echo()",
+            "print()",
+            "write()",
+            "output()"
+        ],
+        "answer_index": 1,
+        "explanation": "標準出力関数とは、「画面に文字や値を表示するための関数」のことです。\nPythonでは print() を使います。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "print(5 // 2)",
+        "choices": [
+            "3",
+            "2.5",
+            "2.0",
+            "2"
+        ],
+        "answer_index": 3,
+        "explanation": "Pythonでは // を使うと、割り算の結果を 小数点以下を切り捨てに します。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "x = [1,2,3]\nx.append(4)\nprint(x)",
+        "choices": [
+            "[1,2,3]",
+            "[4]",
+            "[1,2,3,4]",
+            "エラー"
+        ],
+        "answer_index": 2,
+        "explanation": "append() はリストの末尾に要素を追加するメソッドです。\n初期状態\n[1, 2, 3]\nappend(4) 実行後\n[1, 2, 3, 4]"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "辞書キー取得メソッドは？",
+        "code": "",
+        "choices": [
+            "values()",
+            "keys()",
+            "items()",
+            "get()"
+        ],
+        "answer_index": 1,
+        "explanation": "keys() は辞書（dict）から キーだけを取得するメソッド です。\nvalues()は値を、items()はキーと値のペアを、get()は指定したキーの値を取得できます。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "for i in range(1,10,2):\n    print(i)",
+        "choices": [
+            "1 2 3 4 5 6 7 8 9",
+            "1 3 5 7 9",
+            "2 4 6 8",
+            "1 3 5 7"
+        ],
+        "answer_index": 1,
+        "explanation": "range(a,b,c)は\nstart = a, stop = b, step = cとなります。\n今回のコードでは1から9までの２ずつ増加して(1,3,5,7,9)取得します。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "例外処理キーワードは？",
+        "code": "",
+        "choices": [
+            "catch",
+            "error",
+            "throw",
+            "except"
+        ],
+        "answer_index": 3,
+        "explanation": "例外処理とはプログラム実行中にエラーが起きたとき、それを安全に処理する仕組みです。\nPythonでは try と except を使います。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "x = {1,2,2,3}\nprint(len(x))",
+        "choices": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "answer_index": 1,
+        "explanation": "このコードでは {} を使っているので、set（集合） が作られています。\n集合には重複を許さない、順序を持たないという特徴があります。\nlen()は要素を数えるため答えは3になります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "関数定義は？",
+        "code": "",
+        "choices": [
+            "function",
+            "func",
+            "define",
+            "def"
+        ],
+        "answer_index": 3,
+        "explanation": "関数定義とは、Pythonで関数（処理のまとまり）を作るときは def を使います。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "print(bool(\"\"))",
+        "choices": [
+            "True",
+            "False",
+            "\"\"",
+            "エラー"
+        ],
+        "answer_index": 1,
+        "explanation": "Pythonの bool() は「値を真偽値（True / False）に変換する関数」です。\n次のような値は False扱い（Falsy） になります。\n0,0.0,\"\"(空文字),[](空リスト),{}(空辞書),None"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "モジュール（ライブラリ）を読み込むときに使用するものは？",
+        "code": "",
+        "choices": [
+            "include",
+            "import",
+            "using",
+            "require"
+        ],
+        "answer_index": 1,
+        "explanation": "Pythonで使用するのはimportです。\nincludeはC言語、usingはC#、requireはJavaScriptで使用されています。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードの実行結果は？",
+        "code": "x = [1,2,3]\nprint(x[-1])",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "エラー"
+        ],
+        "answer_index": 2,
+        "explanation": "Pythonのリストは、後ろからもアクセスできます。\n-1→最後の要素、-2→末尾から2番目の要素、-3→末尾から3番目になります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "x = [i for i in range(3)]\nprint(x)",
+        "choices": [
+            "[1,2,3]",
+            "[0,1,2]",
+            "[0,1,2,3]",
+            "エラー"
+        ],
+        "answer_index": 1,
+        "explanation": "このコードの書き方はリスト内包表記になります。このコードは次のコードと同じ意味です。\nx = []\nfor i in range(3):\n    x.append(i)"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "def f(x, y=10):\n    return x + y\nprint(f(5))",
+        "choices": [
+            "5",
+            "10",
+            "15",
+            "50"
+        ],
+        "answer_index": 2,
+        "explanation": "この関数のy=10はデフォルト引数です。\nf(5)はx=5で呼び出し、yは呼ばれていないのでデフォルト引数の10が入りました。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "タプルは？",
+        "code": "",
+        "choices": [
+            "[]",
+            "{}",
+            "()",
+            "set()"
+        ],
+        "answer_index": 2,
+        "explanation": "タプルは「複数のデータをまとめる」データ型で、丸括弧 () を使います。\n[]はリスト、{}は辞書、set()はからの集合を作る関数になります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "x = {\"a\":1}\nprint(x.get(\"b\", 0))",
+        "choices": [
+            "nan",
+            "0",
+            "エラー",
+            "\"b\""
+        ],
+        "answer_index": 1,
+        "explanation": "get() メソッドは辞書（dict）から値を取得するときに使います。\nx.get(キー, デフォルト値)\nキーが存在する → その値を返す\nキーが存在しない → デフォルト値を返す\n今回のコードでは\"b\"は辞書xに存在しないのでデフォルト値0が返ります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "ファイル操作開始関数は？",
+        "code": "",
+        "choices": [
+            "file()",
+            "open()",
+            "read()",
+            "fopen()"
+        ],
+        "answer_index": 1,
+        "explanation": "openはPythonでファイルを扱うときの開始（オープン）関数です。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "x = [1,2,3]\ny = x\ny.append(4)\nprint(x)",
+        "choices": [
+            "[1,2,3]",
+            "[1,2,3,4]",
+            "[4]",
+            "エラー"
+        ],
+        "answer_index": 1,
+        "explanation": "今回のコードはyはxの同じリストを参照しています。\nそのため、y.append(4)でyのリストに4を追加していますが実際には同じリストを変更しています。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "クラス定義キーワードは？",
+        "code": "",
+        "choices": [
+            "class",
+            "object",
+            "struct",
+            "define"
+        ],
+        "answer_index": 0,
+        "explanation": "Pythonでクラス（設計図）を作るときは class を使います。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "with文の目的は？",
+        "code": "",
+        "choices": [
+            "ループ",
+            "条件分岐",
+            "リソース管理",
+            "型変換"
+        ],
+        "answer_index": 2,
+        "explanation": "with は ファイルや接続などのリソースを安全に扱うための構文です。\nwith文の目的\n・ファイルを開く\n・処理が終わったら自動で閉じる\n・close() の書き忘れを防ぐ"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "print(isinstance(10, int))",
+        "choices": [
+            "True",
+            "False",
+            "int",
+            "エラー"
+        ],
+        "answer_index": 0,
+        "explanation": "isinstance(値, 型) は、その値が指定した型かどうかを判定する関数です。\n今回の判定では、10は整数、intも整数型を表すため条件は成立してTrueを返します。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のコードの実行結果は？",
+        "code": "print(\"Python\" * 2)",
+        "choices": [
+            "PythonPython",
+            "Python2",
+            "2Python",
+            "エラー"
+        ],
+        "answer_index": 0,
+        "explanation": "Pythonでは、文字列に整数を掛けると 繰り返し になります。\n\"Python\" + \"Python\"と同じ意味になります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "Pythonの特徴に関する説明で、誤っているものはどれか",
+        "code": "",
+        "choices": [
+            "Windows、Mac、Linuxで使える",
+            "手動でコンパイルする必要がない",
+            "文のグルーピングはカッコで囲う",
+            "インタープリタは対話的に使うことができる"
+        ],
+        "answer_index": 2,
+        "explanation": "Pythonの文のグルーピングは、カッコではなくインデント（スペース）で行われます。\n以下のコードの場合、print文の前にインデントがないとIndentationErrorになります。\nfor i in range(5):\n    print(i)"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "Pythonに関する説明で、誤っているものはどれか",
+        "code": "",
+        "choices": [
+            "インタープリタはend()で終了する",
+            "インタープリタでコマンド入力を促すプロンプトを、\nプライマリプロンプトとセカンダリプロンプトと言う",
+            "デフォルトでは、PythonのソースコードはUTF-8として扱われる",
+            "デフォルト以外のエンコーディングを使うことができる"
+        ],
+        "answer_index": 0,
+        "explanation": "終了する場合は、次のいずれかを入力します。\nquit()\nexit()\nCtrl+D（Mac）\nCtrl+Z→Enter（Windows）"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "Pythonの文字列に関する説明で、誤っているものはどれか",
+        "code": "",
+        "choices": [
+            "文字列は+演算子で連結できる",
+            "文字列はインデックス番号による指定ができる",
+            "文字列を複数行にわたって書く場合は、\nトリプルクォーテーションで囲う",
+            "文字列はミュータブルであり、内容を変更できる"
+        ],
+        "answer_index": 3,
+        "explanation": "文字列はイミュータブル（不変体）です。\n例えば「sample = 'book'」とした後、bookの末尾のkをtに変えたい場合、「sample[3] = 't'」とするとエラーになります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "sample = 'Pen' + 2 * 'Pine' + 'Apple'\nprint(sample)",
+        "choices": [
+            "エラーになる",
+            "PenPinePineApple",
+            "PenPenPineApple",
+            "Pen2PineApple"
+        ],
+        "answer_index": 1,
+        "explanation": "文字列は+演算子で連結したり、*演算子で繰り返すことができます。\nPythonでは、+より*のほうが優先順位が高いため、「'Pen' + (2 * 'Pine') + 'Apple'」の順で処理され、「PenPinePineApple」になります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "words = ['pine', 'apple', 'pen']\nfor word in words:\n    print(word)",
+        "choices": [
+            "pine\npine\npine",
+            "pine\napple\npen",
+            "['pine', 'apple', 'pen']\n['pine', 'apple', 'pen']\n['pine', 'apple', 'pen']",
+            "['pine', 'apple', 'pen']"
+        ],
+        "answer_index": 1,
+        "explanation": "リスト「words」の中の要素を一つずつ取り出し、変数「word」に格納してprint文で出力しています。\nfor文は、リストの中の要素をすべて取り出すとループが終了します。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "for i in range(4):\n    if i == 2:\n        continue\n    print(i)",
+        "choices": [
+            "0\n1",
+            "0\n1\n2\n3",
+            "0\n1\n3",
+            "1\n2\n4"
+        ],
+        "answer_index": 2,
+        "explanation": "continueはループを飛ばして次の反復に進みます。\n問題文の場合は、「if i == 2」がTrueになったとき、その回のprint文を飛ばします。そのため、0と1を出力した後、2を飛ばして3を出力します。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "count = 0\nwhile count < 3:\n    pass",
+        "choices": [
+            "0と1が出力される",
+            "エラーになる",
+            "無限ループになる",
+            "passと表示される"
+        ],
+        "answer_index": 2,
+        "explanation": "passは「何もしない」という意味の文です。問題文のようにpassが書いてあれば、構文エラー（SyntaxError）にはなりません。\nwhileは、条件がTrueの間、処理を繰り返します。問題文の場合は「count < 3」がTrueで、処理がpassのため、何もしない処理が無限に続きます。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "次のコードの出力結果として、正しいものはどれか",
+        "code": "def add_one(arg):\n    result = arg + 1\n    print(result)\nadd_one(1)",
+        "choices": [
+            "1",
+            "2",
+            "result",
+            "エラーになる"
+        ],
+        "answer_index": 1,
+        "explanation": "add_one(1)で関数を呼び出すと、実引数の1が仮引数に代入されます。その後に「arg + 1」が計算され、print文が実行されます。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "Pythonのデータ構造に関する説明で、誤っているものはどれか",
+        "code": "",
+        "choices": [
+            "リストは[]で表し、要素の追加・変更・削除ができる。",
+            "タプルは()で表し、要素の追加・変更・削除はできない。",
+            "辞書は{キー: 値}で表し、要素の追加・変更・削除ができる。\nただし、値は変更できるが、キーは変更できない。\nまた、同じキーを重複して格納することはできない。",
+            "集合は{}で表し、要素の追加・変更・削除ができる。\nまた、同じ値を重複して格納し、取り出すことができる。"
+        ],
+        "answer_index": 3,
+        "explanation": "集合は要素の追加・変更・削除はできますが、同じ値を重複して格納することはできません。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "easy",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "num = [1, 2, 3, 4]\nprint(num.pop())",
+        "choices": [
+            "エラーになる",
+            "4",
+            "3",
+            "[1,2,3]"
+        ],
+        "answer_index": 1,
+        "explanation": "pop()は、リストから末尾の要素を削除し、その要素を返します。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "Pythonのインタープリタで次のコードを実行した場合、表示される結果として正しいものはどれか",
+        "code": ">>> a = 10",
+        "choices": [
+            "a",
+            "10",
+            "a = 10",
+            "何も表示されない"
+        ],
+        "answer_index": 3,
+        "explanation": "代入文である「a = 10」は、値を表示するための命令ではないため、実行しても結果は表示されません。\n次のように変数名「a」を入力した場合は、その評価結果が表示されます。\n>>> a = 10\n>>> a\n10"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "sample = 'Apple'\nprint(sample[5])",
+        "choices": [
+            "e",
+            "エラーになる",
+            "5",
+            "A"
+        ],
+        "answer_index": 1,
+        "explanation": "Pythonの文字列は、インデックス番号を指定して1文字ずつ取得することができます。インデックスは0から始まるため、文字列「Apple」の場合は次のようになります。\nA p p l e\n0 1 2 3 4\n問題文の場合は、インデックス番号の範囲外である「5」を指定しているため、IndexErrorが発生します。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "nums = [1, 2, 3]\nnums.append(4, 5)\nprint(nums)",
+        "choices": [
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, [4, 5]]",
+            "[1, 2, 3]",
+            "エラーになる"
+        ],
+        "answer_index": 3,
+        "explanation": "append()メソッドはリストの末尾にアイテムを追加することができますが、引数は一つしか取れないため、問題文はTypeErrorになります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "total_pages = 7\nfor page in range(1, total_pages + 1, 2):\n    print(f'{page}ページ')",
+        "choices": [
+            "1ページ\n2ページ\n3ページ\n4ページ\n5ページ\n6ページ",
+            "2ページ\n4ページ\n6ページ",
+            "1ページ\n3ページ\n5ページ",
+            "1ページ\n3ページ\n5ページ\n7ページ"
+        ],
+        "answer_index": 3,
+        "explanation": "range()の引数が3つある場合は、次の意味になります。\nrange(開始, 終了, ステップ)\n問題文の場合はtotal_pagesが「7」のため、実際には次の引数になります。\nrange(1, 8, 2)\n開始が「1」でステップが「2」のため、1から2つずつ増加して「1、3、5、7」が生成され、奇数ページだけ出力されます。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "for i in range(3):\n    if i == 1:\n        continue\n    for j in range(3):\n        if j == 1:\n            break\n        print(i, j)",
+        "choices": [
+            "0 0\n2 0",
+            "0 0",
+            "0 0\n1 0\n2 0",
+            "0 0\n0 1\n1 0\n1 1\n2 0\n2 1"
+        ],
+        "answer_index": 0,
+        "explanation": "continueは、現在のループの残りの処理をスキップして、次の反復に進みます。外側のループでcontinueが実行された場合は、内側のループもスキップします。\nbreakは、最も内側のfor文またはwhile文のループを終了します。外側のfor文またはwhile文のループは終了しません。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "def job(x, y):\n    print(x, y)\njob(x=30, 20)",
+        "choices": [
+            "SyntaxErrorになる",
+            "NameErrorになる",
+            "30 20",
+            "20 30"
+        ],
+        "answer_index": 0,
+        "explanation": "関数に引数を渡すときは、位置引数の後にキーワード引数を書くことはできますが、キーワード引数の後に位置引数を書くことはできません。\n問題文の「job(x=30, 20)」は、キーワード引数の後に位置引数を書いているため、SyntaxErrorになります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "def show(*args, **kwargs):\n    print(args)\n    print(kwargs)\nshow(1, 2, a=3, b=4)",
+        "choices": [
+            "(1, 2, 3, 4)\n{}",
+            "(1, 2)\n{'a': 3, 'b': 4}",
+            "1, 2\n{'a': 3, 'b': 4}",
+            "1, 2\n3, 4"
+        ],
+        "answer_index": 1,
+        "explanation": "・*args\n位置引数をまとめて受け取り、タプルとして格納されます。\n・**kwargs\nキーワード引数をまとめて受け取り、辞書として格納されます。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "nums = [1, 2, 3, 4]\nresult = [n for n in nums if n % 2 == 0]\nprint(result)",
+        "choices": [
+            "[2, 4]",
+            "[1, 3]",
+            "[1, 2, 3, 4]",
+            "エラーになる"
+        ],
+        "answer_index": 0,
+        "explanation": "問題文のコードは、numsの各要素をnに順番に代入しながら、「n % 2 == 0（2で割った余りが0）」という条件を満たすものだけ、リストに追加しています。\n同じ処理をfor文で書くと、次のようになります。\nnums = [1, 2, 3, 4]\nresult = []\nfor n in nums:\n    if n % 2 == 0:\n        result.append(n)\nprint(result)\nリスト内包表記を使うことで、簡潔に書くことができます。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "data = 'error',\nprint(data)",
+        "choices": [
+            "('error', )",
+            "['error', ]",
+            "{'error', }",
+            "error"
+        ],
+        "answer_index": 0,
+        "explanation": "Pythonでは、文字列でも数値でも、値の最後にカンマをつけるとタプルになります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "normal",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "a = {'apple', 'banana'}\nb = {'banana', 'orange'}\nprint(a | b)",
+        "choices": [
+            "{'apple', 'orange'}",
+            "{'apple'}",
+            "{'apple', 'banana', 'orange'}",
+            "{'banana'}"
+        ],
+        "answer_index": 2,
+        "explanation": "(a | b)は和集合です。和集合は「aまたはbまたは両者に存在する要素」となります。\n(a ^ b)は「aまたはbにある共通しない要素」を返す演算の結果で対称差または排他的論理和と呼ばれています。\n出力結果：{'apple', 'orange'}\n(a - b)は「aに存在しbにはない要素」を返す演算の結果で、差集合と呼ばれています。\n出力結果：{'apple'}\n(a & b)は「aにもbにも存在する要素」を返す演算の結果で、積集合と呼ばれています。\n{'banana'}"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "a = 1\nb = 2\nb, c = a + 3, b + 1\nd = 1 + b ** 2\ne = d - 8 / 2\nf = e % 3\nprint(d)\nprint(e)\nprint(f)",
+        "choices": [
+            "9\n5.0\n1",
+            "7\n4\n1.0",
+            "17\n13\n1",
+            "17\n13.0\n1.0"
+        ],
+        "answer_index": 3,
+        "explanation": "b, c = a + 3, b + 1            b = 1+3 =4     c = 2+1 = 3\nd = 1 + b ** 2                 d = 1+4**2 = 1+16 = 17\ne = d - 8 / 2                   e = 17-8/2 = 17-4 = 13.0\nf = e % 3                         f = 13.0%3 = 1.0\nPythonの演算で覚えておくべきルールは、次の四つです。\n【1】 除算（/）は常にfloat型を返す。\n【2】 演算にfloat型が含まれる場合、結果はfloat型になる。\n【3】 int型同士の演算は基本的にint型を返す（除算の/を除く）。\n【4】 演算の優先順位は高い順に「累乗 → 掛け算・割り算 → 足し算・引き算」である。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "print('Process started.\\\n' + 'Waiting for \\'input\\'...')",
+        "choices": [
+            "SyntaxErrorになる",
+            "Process started.\nWaiting for 'input'…",
+            "Process started.\\nWaiting for 'input'…",
+            "Process started.\\\\nWaiting for input…"
+        ],
+        "answer_index": 2,
+        "explanation": "文字列の中で、「n」の前にバックスラッシュをつけて「\\n」とすると、改行になります\nこの「\\n」はエスケープシーケンスと呼ばれており、次のものがあります\n\\t → タブ,\\n → 改行,\\' → シングルクォーテーション,\\\" → ダブルクォーテーション,\\\\ → バックスラッシュ\n「'」の前にバックスラッシュをつけて「\\'」とすると、文字列を囲う「'」ではなく、英語の省略や強調で使う「'」になります。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のコードを実行した結果として、正しいものはどれか",
+        "code": "log = 'WARNING|DiskFull'\npos = log.index('|')\nlevel = log[:pos]\nmessage = log[pos+1:]\nprint(level)\nprint(message)",
+        "choices": [
+            "DiskFull\nWARNING",
+            "WARNING|\nDiskFull",
+            "WARNING\n|DiskFull",
+            "WARNING\nDiskFull"
+        ],
+        "answer_index": 3,
+        "explanation": "pos = log.index('|')\nindex()メソッドは、指定した文字のインデックス（位置）を返します。「|」は0から数えてインデックス7の位置にあるため、posには「7」が代入されます。\nlevel = log[:pos]log[:7]となり、先頭からインデックス7の直前まで取得します。スライスは終了位置を含まないため、log[0:7]はインデックス0から6までの文字を取得することになり、levelに「WARNING」が代入されます。\nmessage = log[pos+1:]log[8:]となり、インデックス8から末尾まで取得します。「|」はインデックス7のため、「|」の次の位置から末尾までを取得することになり、messageに「DiskFull」が代入されます。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のコードを実行した結果として、正しいものはどれか。",
+        "code": "items = [\n    ['apple', 100],\n    ['banana', 80],\n    ['orange', 120]\n]\nfor item in items:\n    if item[0] == 'banana':\n        item[1] -= 20\nprint(items[1][1])",
+        "choices": [
+            "banana",
+            "100",
+            "80",
+            "60"
+        ],
+        "answer_index": 3,
+        "explanation": "このリストは入れ子構造になっており、[商品名, 在庫数]という形式のリストが複数含まれています。\n「for item in items」により、次の順番でitemに要素が代入されます。\n['apple', 100],['banana', 80],['orange', 120]\nこの要素を一つずつ取り出して処理し、「item[0] == 'banana'」の条件に一致した場合に、「item[1] -= 20」を実行します。\nprint(items[1][1]) により、['banana', 60]の在庫数である「60」が出力されます。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のコードを実行した結果として、正しいものはどれか。",
+        "code": "user_ids = ['A001', 'A002', 'A003']\nfor i in range(len(user_ids)):\n    i += 1\n    print(i, user_ids[i])",
+        "choices": [
+            "0 A001\n1 A002\n2 A003",
+            "1 A001\n2 A002\n3 A003",
+            "1 A002\n2 A003\nエラー",
+            "1 A001\n2 A002\nエラー"
+        ],
+        "answer_index": 2,
+        "explanation": "for i in range(len(user_ids)):\n    i += 1\nこの処理により、iの値は以下のように変化します。\n0  → 1,1  → 2,2  → 3\nその結果、user_ids[i]で取得する要素は以下になります。\nuser_ids[1] → A002,user_ids[2] → A003,user_ids[3] → 存在しないためIndexError\nprint(i, user_ids[i])の出力は以下になります。\n1 A002,2 A003,IndexError: list index out of range"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "関数に定義されたdocstringの説明として、正しいものはどれか",
+        "code": "",
+        "choices": [
+            "docstringはコメントと同様に無視されるため、実行時に取得することはできない。",
+            "docstringはユーザーが定義する関数だけに存在し、組み込み関数には存在しない。",
+            "docstringは、関数オブジェクトの__doc__属性として保持されている。",
+            "docstringを取得するには、関数名に対してdoc()関数を呼び出す。"
+        ],
+        "answer_index": 2,
+        "explanation": "docstringはコメントと同様に無視されるため、実行時に取得することはできない。\n→docstringはコメント（#）とは異なり、実行時に取得可能な文字列データです。\ndocstringはユーザーが定義する関数だけに存在し、組み込み関数には存在しない。\n→docstringはユーザー定義関数だけでなく、len()などの組み込み関数にも存在します。\ndocstringを取得するには、関数名に対してdoc()関数を呼び出す。\n→doc()という関数は標準では存在しません。\ndocstringを確認するには、選択肢3の__doc__属性か、選択肢1の解説の例文のようにhelp()関数を使います。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "次のタプルのリストを、タプルの2番目の要素をキーにして並べ替える場合、正しい記述はどれか",
+        "code": "data = [(1, 3), (3, 2), (2, 1)]",
+        "choices": [
+            "data.sort(key=lambda: x[1])",
+            "data.sort(key=lambda x: x[1])",
+            "data.sort(key=lambda x: x[2])",
+            "data.sort(lambda x: x[1])"
+        ],
+        "answer_index": 1,
+        "explanation": "2番目の要素をキーにする場合は、key引数に関数を渡します。\ndata = [(1, 3), (3, 2), (2, 1)]\ndef get_second(x):\n    return x[1]\ndata.sort(key=get_second)\nprint(data)\n▶︎[(2, 1), (3, 2), (1, 3)]\nlambdaは無名関数と呼ばれています。\n名前をつけずに簡単な関数を定義するための仕組みで、一時的に関数を引数として渡したい場合によく使われます。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "docstringの基本的な記述方法として、誤っているものはどれか",
+        "code": "",
+        "choices": [
+            "「#」を用いて記述する。",
+            "1行目で関数の概要を簡潔に説明する。",
+            "複数行で記述する場合は、1行目の概要の後に空行を入れる。",
+            "引数と戻り値の説明を記述することがある。"
+        ],
+        "answer_index": 0,
+        "explanation": "Pythonには「PEP」と呼ばれる公式のドキュメント群があります。\nインデントの方法や関数の命名規則などが記載されており、docstringに関しても基本的な書き方が記されています。\ndocstringの基本的な記述方法は以下です。\n● def文の直下で、トリプルクォーテーションで囲って記述する。\n● 1行目で関数の概要を簡潔に説明する。\n● 複数行で記述する場合は、1行目の概要の後に空行を入れて詳細を記述する。"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "PEP8のコーディング規約に関する説明で、誤っているものはどれか",
+        "code": "",
+        "choices": [
+            "インデントはスペース4つである。",
+            "カンマの後ろに空白文字を入れる。",
+            "import文の順番は次のルールである。\n1 ローカルのライブラリ\n2 標準のライブラリ\n3 サードパーティのライブラリ",
+            "関数や変数の名前は、lowercaseまたはlower_case_with_underscoreを使う。"
+        ],
+        "answer_index": 2,
+        "explanation": "PEP8では、import文の順番は次のルールになっています。\n1 標準のライブラリ\n2 サードパーティのライブラリ\n3 ローカルのライブラリ\nローカルのライブラリとは、次の構成の場合のutility.pyを指します。\nmy_project/ ← プロジェクトフォルダ\n│\n├─ main.py \n└─ utility.py"
+    },
+    {
+        "category": "cert",
+        "difficulty": "hard",
+        "question": "[1, 2, 3]の結果にならない記述はどれか。\nnum1 = [1, 2, 3]",
+        "code": "",
+        "choices": [
+            "num2 = num1.copy()\nnum2[2] = 4\nprint(num1)",
+            "num2 = num1\nnum2[2] = 4\nprint(num1)",
+            "num2 = list(num1)\nnum2[2] = 4\nprint(num1)",
+            "num2 = num1[:]\nnum2[2] = 4\nprint(num1)"
+        ],
+        "answer_index": 1,
+        "explanation": "1つ目の選択肢、copy()メソッドを使うとリストをコピーします。そのため、num2を変更してもnum1に影響はありません。\n2つ目の選択肢、「num2 = num1」は、num2にnum1をコピーしたのではなく、num2がnum1を参照するよう定義しています。\nそのため、num2を変更するとnum1も変更されます。\n3つ目の選択肢、list関数は、引数のイテラブルオブジェクトから要素を一つずつ取り出し、新しいリストを生成します。\n4つ目の選択肢、num2は新しいオブジェクトになるため、num1の参照ではありません。"
+    }
+]

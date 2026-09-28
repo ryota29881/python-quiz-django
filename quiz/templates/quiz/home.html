@@ -1,0 +1,52 @@
+{% extends "quiz/base.html" %}
+
+{% block title %}Pythonクイズアプリ{% endblock %}
+
+{% block content %}
+<div class="home-card">
+    <div class="hero-section">
+        <h2>Pythonクイズアプリ</h2>
+        <p class="hero-description">
+            Pythonの知識をクイズ形式で確認しながら、楽しみながら学習できます。
+        </p>
+    </div>
+
+    {% if user.is_authenticated %}
+        <div class="login-status success-status">
+            <strong>{{ user.username }} さん、こんにちは！</strong><br>
+            クイズ結果はマイページに保存されます。
+        </div>
+    {% else %}
+        <div class="login-status">
+            ログインすると、クイズの成績や過去の結果を保存できます。
+        </div>
+    {% endif %}
+
+    <div class="quiz-menu-grid">
+        <a href="{% url 'index' %}" class="quiz-menu-card">
+            <h3>4択クイズ</h3>
+            <p>Pythonの基礎知識を4択形式で確認します。</p>
+            <span class="quiz-menu-link">挑戦する →</span>
+        </a>
+
+        <a href="{% url 'code_quiz_difficulty_select' %}" class="quiz-menu-card">
+            <h3>コード作成クイズ</h3>
+            <p>実際にPythonコードを書いて問題に挑戦します。</p>
+            <span class="quiz-menu-link">挑戦する →</span>
+        </a>
+
+        <a href="{% url 'history' %}" class="quiz-menu-card">
+            <h3>マイページ</h3>
+            <p>これまでの成績や正答率、クイズ履歴を確認できます。</p>
+            <span class="quiz-menu-link">成績を見る →</span>
+        </a>
+    </div>
+
+    {% if not user.is_authenticated %}
+        <div class="home-register-message">
+            <p>成績を保存して学習記録を残したい方は、無料でアカウントを作成できます。</p>
+            <a href="{% url 'register' %}" class="primary-link">新規登録する</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

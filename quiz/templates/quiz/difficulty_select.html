@@ -1,0 +1,41 @@
+{% extends "quiz/base.html" %}
+
+{% block title %}
+難易度選択
+{% endblock %}
+
+{% block content %}
+
+<h2>
+    {{ category_display }} の難易度を選択してください
+</h2>
+
+{% if error_message %}
+
+<p class="error-message">
+    {{ error_message }}
+</p>
+
+{% endif %}
+
+<div class="menu-buttons">
+
+    {% for value, label in difficulties %}
+
+        <p>
+            <a href="{% url 'start_quiz' category value %}">
+                {{ label }}
+            </a>
+        </p>
+
+    {% endfor %}
+
+</div>
+
+<p>
+    <a href="{% url 'index' %}">
+        カテゴリ選択に戻る
+    </a>
+</p>
+
+{% endblock %}
