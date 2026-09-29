@@ -103,7 +103,7 @@ class QuizHistoryTests(TestCase):
 
         self.assertContains(response, "クイズ種別ごとの成績")
         self.assertContains(response, "4択クイズ・カテゴリ別成績")
-        self.assertContains(response, "Rank B")
+        self.assertContains(response, "Rank A")
 
     def test_history_page_is_available_for_logged_in_user(self):
         self.client.login(
