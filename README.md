@@ -28,7 +28,7 @@ Python・Tkinterで制作したクイズアプリを、Djangoを使用したWeb�
 ## ディレクトリ構成
 
 ```text
-python_quiz/
+python-quiz-django/
 ├── config/                  # Djangoプロジェクト設定
 ├── quiz/                    # 4択クイズ・認証・履歴・マイページ
 ├── code_quiz/               # コード作成クイズ
