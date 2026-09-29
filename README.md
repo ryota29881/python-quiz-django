@@ -53,7 +53,7 @@ python_quiz/
 
 ```bash
 git clone <GitHubリポジトリのURL>
-cd python_quiz
+cd python-quiz-django
 ```
 
 ### 2. 仮想環境を作成
