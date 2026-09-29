@@ -52,7 +52,7 @@ python_quiz/
 ### 1. リポジトリを取得
 
 ```bash
-git clone <GitHubリポジトリのURL>
+git clone https://github.com/ryota29881/python-quiz-django
 cd python-quiz-django
 ```
 
