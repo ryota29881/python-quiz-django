@@ -441,6 +441,12 @@ a:hover {
 
 .choice span {
     font-size: 16px;
+
+    white-space: pre-wrap;
+
+    overflow-wrap: anywhere;
+
+    min-width: 0;
 }
 
 
@@ -735,7 +741,7 @@ hr {
     }
 
 
-    .choice span {
+   .choice span {
         font-size: 15px;
     }
 
@@ -1225,6 +1231,11 @@ textarea:focus-visible {
 .result-box p {
     text-align: center;
     white-space: pre-wrap;
+}
+
+/* 解説本文は左揃え */
+.result-box .explanation-text {
+    text-align: left;
 }
 
 .result-box .correct-answer p {
