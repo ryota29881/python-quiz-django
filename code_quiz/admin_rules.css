@@ -1,0 +1,20 @@
+.field-rule_assignment,
+.field-rule_print,
+.field-rule_for_loop,
+.field-rule_while_loop,
+.field-rule_if_statement,
+.field-rule_function,
+.field-rule_class,
+.field-rule_list_assignment,
+.field-rule_dict_assignment,
+.field-rule_compare {
+    margin-bottom: 4px;
+}
+
+#codequestion_form .aligned label {
+    min-width: 180px;
+}
+
+#codequestion_form .help {
+    margin-left: 180px;
+}
