@@ -6,10 +6,10 @@ Python・Tkinterで制作したクイズアプリを、Djangoを使用したWeb�
 
 ## 作品概要
 
-- **4択クイズ**：カテゴリ・難易度を選択して5問出題
+- **4択クイズ**：カテゴリ・難易度を選択して最大5問に回答
 - **コード作成クイズ**：Pythonコードを入力して自動判定
-- **解答・解説表示**：各問題の回答後に正誤と解説を表示
-- **結果表示**：5問終了後にスコア・正答率・ランクを表示
+- **解答・解説表示**：回答後に正誤と解説を表示
+- **結果表示**：クイズ終了後に正解数・正答率・ランクを表示
 - **ユーザー機能**：新規登録、ログイン、ログアウト
 - **マイページ**：ログインユーザーの成績・クイズ履歴を表示
 - **Django Admin**：問題、選択肢、コード問題、クイズ履歴を管理
@@ -19,7 +19,7 @@ Python・Tkinterで制作したクイズアプリを、Djangoを使用したWeb�
 ## 技術スタック
 
 - Python
-- Django 6.1.1
+- Django（`requirements.txt` に記載されたバージョン）
 - SQLite
 - HTML / CSS
 - Django Templates
@@ -35,17 +35,17 @@ python-quiz-django/
 ├── question_data/           # 問題データ（JSON）
 ├── manage.py
 ├── requirements.txt
-├── .env.example
-├── .gitignore
+├── .env.example             # 環境変数の設定例（自動読込はしない）
+├── .gitignore               # Gitの追跡対象から除外するファイル
 └── README.md
 ```
 
-※ `db.sqlite3`、仮想環境、PythonのキャッシュなどはGitHubへ公開しない構成にしています。
+`db.sqlite3` は初回のマイグレーション時に作成されるローカルデータベースです。データベース、秘密情報、仮想環境、Pythonのキャッシュ、IDEの設定ファイルなどは `.gitignore` でGitの追跡対象から除外します。
 
 ## 動作環境
 
 - Python 3.12 以上を推奨
-- Django 6.1.1
+- Django：`requirements.txt` に記載されたバージョン
 
 ## ローカル環境での起動方法
 
@@ -68,7 +68,7 @@ python -m venv venv
 ### 3. 必要なパッケージをインストール
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ### 4. データベースを作成
@@ -79,7 +79,7 @@ python manage.py migrate
 
 ### 5. 問題データを登録
 
-リポジトリには、4択問題90問とコード作成問題30問のJSONデータを含めています。
+リポジトリには、4択問題とコード作成問題のJSONデータを含めています。
 
 ```bash
 python manage.py import_questions
@@ -133,9 +133,7 @@ python manage.py createsuperuser
 http://127.0.0.1:8000/admin/
 ```
 
-4択問題では、問題文と選択肢を同じ画面から管理できます。
-
-コード作成問題では、問題文・難易度・解説・AST判定用ルールを管理できます。
+4択問題では、問題文や選択肢を管理できます。コード作成問題では、問題文・難易度・解説・判定用ルールなどを管理できます。
 
 ## テスト
 
@@ -147,18 +145,24 @@ python manage.py test quiz code_quiz
 
 ## GitHubへ公開する際の注意
 
-このプロジェクトでは、以下をGitHubへ公開しないよう `.gitignore` を設定しています。
+`.gitignore` では、以下をGitの追跡対象から除外します。
 
-- `db.sqlite3`
-- `.env`
-- 仮想環境（`venv/` など）
-- `__pycache__/`
-- Pythonのコンパイル済みファイル
-- IDEの設定ファイル
+- `db.sqlite3` とデータベースの一時ファイル
+- `.env` などの環境変数ファイル（`.env.example` は除く）
+- 仮想環境（`venv/`、`.venv/`、`env/`）
+- `__pycache__/`、`*.pyc` などのPythonキャッシュ・コンパイル済みファイル
+- `.vscode/`、`.idea/` などのIDE設定
+- OSが生成する一部のファイル
 
-Djangoの`SECRET_KEY`もソースコードに固定値として記載せず、環境変数 `DJANGO_SECRET_KEY` から設定できるようにしています。
+**注意：** `.gitignore` は、すでにGitで追跡されているファイルを自動で追跡解除するものではありません。公開済みのリポジトリでは、`git status` や `git ls-files` で追跡状態を確認してください。秘密情報がすでに公開されていた場合は、ファイルを削除するだけでなく、該当する秘密情報を変更してください。
 
-ローカル開発時は設定ファイルに用意した開発用の既定値が使用されます。公開環境では必ず独自の秘密鍵を環境変数に設定してください。
+### Djangoの秘密鍵・環境変数
+
+Djangoの設定では、`DJANGO_SECRET_KEY` 環境変数が設定されていればその値を使用し、未設定の場合はローカル開発用の既定値を使用します。`DJANGO_DEBUG` と `DJANGO_ALLOWED_HOSTS` も環境変数から設定できます。
+
+`.env.example` は設定値の記入例です。このプロジェクトは `.env` ファイルを自動読み込みしないため、ファイルを作成しただけでは環境変数は反映されません。ローカルで環境変数を設定する場合は、使用するシェルで設定するか、実行環境の環境変数設定を利用してください。
+
+公開環境では、独自の強固な `DJANGO_SECRET_KEY` を設定し、`DJANGO_DEBUG=False` と適切な `DJANGO_ALLOWED_HOSTS` を指定してください。開発用の既定値を公開環境で使用しないでください。
 
 ## 制作目的
 
